@@ -1,0 +1,25 @@
+Issue Type,Origin,Path,Severity,Confidence,Site Name,Scan deltas,Last Seen
+Cross-site scripting (reflected),https://insecure-website.com,/xss.php/,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,http://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,https://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+TLS certificate,https://insecure-website.com,/,Medium,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Strict transport security not enforced,https://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-origin resource sharing,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-origin resource sharing: arbitrary origin trusted,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Input returned in response (reflected),https://insecure-website.com,/xss.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain Referer leakage,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain script include,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Backup file,https://insecure-website.com,/xss.php,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,http://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,https://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cacheable HTTPS response,https://insecure-website.com,/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/deser.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/dom.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Frameable response (potential Clickjacking),https://insecure-website.com,/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Directory listing,https://insecure-website.com,/csp/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Path-relative style sheet import,https://insecure-website.com,/mavo_dom_based_xss/,Info,Tentative,Wieners Widgets,,2022-05-09 2:05 AM

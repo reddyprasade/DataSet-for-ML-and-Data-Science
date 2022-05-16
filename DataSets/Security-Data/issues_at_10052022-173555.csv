@@ -1,0 +1,158 @@
+Issue Type,Origin,Path,Severity,Confidence,Site Name,Scan deltas,Last Seen
+Cross-site scripting (reflected),http://insecure-website.com,/xss.php/,High,Certain,insecure-website,,2022-05-07 10:05 PM
+Flash cross-domain policy,http://insecure-website.com,/crossdomain.xml,High,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-site scripting (DOM-based),http://insecure-website.com,/csp/dom.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Cross-site scripting (DOM-based),http://insecure-website.com,/csp/dom.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Serialized object in HTTP message,http://insecure-website.com,/csp/deser.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Serialized object in HTTP message,http://insecure-website.com,/csp/deser.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-origin resource sharing,http://insecure-website.com,/cors.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-origin resource sharing: arbitrary origin trusted,http://insecure-website.com,/cors.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Input returned in response (reflected),http://insecure-website.com,/xss.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-domain Referer leakage,http://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-domain script include,http://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Backup file,http://insecure-website.com,/xss.php,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Robots.txt file,http://insecure-website.com,/robots.txt,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+HTML does not specify charset,http://insecure-website.com,/csp/deser.html,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+HTML does not specify charset,http://insecure-website.com,/csp/dom.html,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Frameable response (potential Clickjacking),http://insecure-website.com,/,Info,Firm,insecure-website,,2022-05-07 10:05 PM
+Directory listing,http://insecure-website.com,/csp/,Info,Firm,insecure-website,,2022-05-07 10:05 PM
+Path-relative style sheet import,http://insecure-website.com,/mavo_dom_based_xss/,Info,Tentative,insecure-website,,2022-05-07 10:05 PM
+Cross-site scripting (reflected),https://insecure-website.com,/xss.php/,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,http://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,https://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+TLS certificate,https://insecure-website.com,/,Medium,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Strict transport security not enforced,https://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-origin resource sharing,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-origin resource sharing: arbitrary origin trusted,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Input returned in response (reflected),https://insecure-website.com,/xss.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain Referer leakage,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain script include,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Backup file,https://insecure-website.com,/xss.php,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,http://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,https://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cacheable HTTPS response,https://insecure-website.com,/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/deser.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/dom.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Frameable response (potential Clickjacking),https://insecure-website.com,/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Directory listing,https://insecure-website.com,/csp/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Path-relative style sheet import,https://insecure-website.com,/mavo_dom_based_xss/,Info,Tentative,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (reflected),http://insecure-website.com,/xss.php/,High,Certain,insecure-website,,2022-05-07 10:05 PM
+Flash cross-domain policy,http://insecure-website.com,/crossdomain.xml,High,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-site scripting (reflected),https://insecure-website.com,/xss.php/,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,http://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Flash cross-domain policy,https://insecure-website.com,/crossdomain.xml,High,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+External service interaction (DNS),https://vulnerable-website.com,/catalog/product,High,Certain,Utah Electronics,,2022-05-09 12:48 PM
+External service interaction (HTTP),https://vulnerable-website.com,/catalog/product,High,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Cross-site scripting (DOM-based),http://insecure-website.com,/csp/dom.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Cross-site scripting (DOM-based),http://insecure-website.com,/csp/dom.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Serialized object in HTTP message,http://insecure-website.com,/csp/deser.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Serialized object in HTTP message,http://insecure-website.com,/csp/deser.html,High,Firm,insecure-website,,2022-05-07 10:05 PM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Montoya AI,,2022-05-10 10:01 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Montoya AI,,2022-05-10 10:01 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-site scripting (DOM-based),https://insecure-website.com,/csp/dom.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+SQL injection,https://vulnerable-website.com,/catalog/filter,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/product,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/product,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/product-search-results/,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/search/10,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/search/10,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/search/12,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/catalog/search/12,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/post,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/post,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+SQL injection,https://vulnerable-website.com,/resources/js/angular_1-7-7.js,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+LDAP injection,https://vulnerable-website.com,/catalog/search/12,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+Cross-site scripting (reflected),https://vulnerable-website.com,/catalog/search/2,High,Firm,Utah Electronics,,2022-05-09 12:48 PM
+TLS certificate,https://insecure-website.com,/,Medium,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+SQL injection,https://vulnerable-website.com,/catalog/search/6,High,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Web cache poisoning,https://vulnerable-website.com,/catalog/search/2,High,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Web cache poisoning,https://vulnerable-website.com,/login,High,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,insecure-website,,2022-05-07 10:05 PM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,Montoya AI,,2022-05-10 10:01 AM
+Strict transport security not enforced,https://insecure-website.com,/,Low,Certain,Montoya AI,,2022-05-10 10:01 AM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Strict transport security not enforced,https://insecure-website.com,/,Low,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Strict transport security not enforced,https://vulnerable-website.com,/,Low,Certain,Rippin and Sons,,2022-05-08 8:03 AM
+Password field with autocomplete enabled,https://vulnerable-website.com,/login,Low,Certain,Rippin and Sons,,2022-05-08 8:03 AM
+Strict transport security not enforced,https://vulnerable-website.com,/,Low,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Password field with autocomplete enabled,https://vulnerable-website.com,/login,Low,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Vulnerable JavaScript dependency,https://vulnerable-website.com,/resources/js/angular_1-7-7.js,Low,Tentative,Rippin and Sons,,2022-05-08 8:03 AM
+Vulnerable JavaScript dependency,https://vulnerable-website.com,/resources/js/angular_1-7-7.js,Low,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Open redirection (DOM-based),https://vulnerable-website.com,/catalog/product,Low,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Open redirection (DOM-based),https://vulnerable-website.com,/catalog/product,Low,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Cross-origin resource sharing,http://insecure-website.com,/cors.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-origin resource sharing: arbitrary origin trusted,http://insecure-website.com,/cors.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Input returned in response (reflected),http://insecure-website.com,/xss.php/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-domain Referer leakage,http://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-domain script include,http://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Backup file,http://insecure-website.com,/xss.php,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Robots.txt file,http://insecure-website.com,/robots.txt,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+HTML does not specify charset,http://insecure-website.com,/csp/deser.html,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+HTML does not specify charset,http://insecure-website.com,/csp/dom.html,Info,Certain,insecure-website,,2022-05-07 10:05 PM
+Cross-domain Referer leakage,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cross-domain script include,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cacheable HTTPS response,https://insecure-website.com,/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+HTML does not specify charset,https://insecure-website.com,/csp/deser.html,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+HTML does not specify charset,https://insecure-website.com,/csp/dom.html,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cross-origin resource sharing,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-origin resource sharing: arbitrary origin trusted,https://insecure-website.com,/cors.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Input returned in response (reflected),https://insecure-website.com,/xss.php/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain Referer leakage,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cross-domain script include,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Backup file,https://insecure-website.com,/xss.php,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,http://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Robots.txt file,https://insecure-website.com,/robots.txt,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cacheable HTTPS response,https://insecure-website.com,/,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/deser.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+HTML does not specify charset,https://insecure-website.com,/csp/dom.html,Info,Certain,Wieners Widgets,,2022-05-09 2:05 AM
+Cacheable HTTPS response,https://vulnerable-website.com,/,Info,Certain,Rippin and Sons,,2022-05-08 8:03 AM
+TLS certificate,https://vulnerable-website.com,/,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Input returned in response (reflected),https://vulnerable-website.com,/,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Input returned in response (reflected),https://vulnerable-website.com,/catalog/filter,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Input returned in response (reflected),https://vulnerable-website.com,/catalog/product-search-results/1,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Input returned in response (reflected),https://vulnerable-website.com,/catalog/search/2,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Input returned in response (reflected),https://vulnerable-website.com,/catalog/search/4,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/product-search-results/,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/product-search-results/1,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/10,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/11,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/12,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/12,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/2,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/2,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/3,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/5,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/6,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/7,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/7,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/7,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/7,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/7,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/catalog/search/9,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/login,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/login,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/login,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Backup file,https://vulnerable-website.com,/login,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Cacheable HTTPS response,https://vulnerable-website.com,/,Info,Certain,Utah Electronics,,2022-05-09 12:48 PM
+Frameable response (potential Clickjacking),http://insecure-website.com,/,Info,Firm,insecure-website,,2022-05-07 10:05 PM
+Directory listing,http://insecure-website.com,/csp/,Info,Firm,insecure-website,,2022-05-07 10:05 PM
+Frameable response (potential Clickjacking),https://insecure-website.com,/,Info,Firm,Montoya AI,,2022-05-10 10:01 AM
+Directory listing,https://insecure-website.com,/csp/,Info,Firm,Montoya AI,,2022-05-10 10:01 AM
+Frameable response (potential Clickjacking),https://insecure-website.com,/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Directory listing,https://insecure-website.com,/csp/,Info,Firm,Wieners Widgets,,2022-05-09 2:05 AM
+Frameable response (potential Clickjacking),https://vulnerable-website.com,/,Info,Firm,Rippin and Sons,,2022-05-08 8:03 AM
+Spoofable client IP address,https://vulnerable-website.com,/post,Info,Firm,Utah Electronics,New,2022-05-09 12:48 PM
+Frameable response (potential Clickjacking),https://vulnerable-website.com,/,Info,Firm,Utah Electronics,,2022-05-09 12:48 PM
+Path-relative style sheet import,http://insecure-website.com,/mavo_dom_based_xss/,Info,Tentative,insecure-website,,2022-05-07 10:05 PM
+Path-relative style sheet import,https://insecure-website.com,/mavo_dom_based_xss/,Info,Tentative,Wieners Widgets,,2022-05-09 2:05 AM
+File path manipulation,https://vulnerable-website.com,/catalog/search/6,Info,Tentative,Utah Electronics,,2022-05-09 12:48 PM
+Request URL override,https://vulnerable-website.com,/,Info,Tentative,Utah Electronics,,2022-05-09 12:48 PM

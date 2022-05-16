@@ -1,0 +1,12 @@
+Issue Type,Origin,Path,Severity,Confidence,Site Name,Scan deltas,Last Seen
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Montoya AI,,2022-05-10 10:01 AM
+Serialized object in HTTP message,https://insecure-website.com,/csp/deser.html,High,Firm,Montoya AI,,2022-05-10 10:01 AM
+Unencrypted communications,http://insecure-website.com,/,Low,Certain,Montoya AI,,2022-05-10 10:01 AM
+Strict transport security not enforced,https://insecure-website.com,/,Low,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cross-domain Referer leakage,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cross-domain script include,https://insecure-website.com,/mavo_dom_based_xss/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Cacheable HTTPS response,https://insecure-website.com,/,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+HTML does not specify charset,https://insecure-website.com,/csp/deser.html,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+HTML does not specify charset,https://insecure-website.com,/csp/dom.html,Info,Certain,Montoya AI,,2022-05-10 10:01 AM
+Frameable response (potential Clickjacking),https://insecure-website.com,/,Info,Firm,Montoya AI,,2022-05-10 10:01 AM
+Directory listing,https://insecure-website.com,/csp/,Info,Firm,Montoya AI,,2022-05-10 10:01 AM

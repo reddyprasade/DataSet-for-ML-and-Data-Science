@@ -1,0 +1,1491 @@
+<html>
+<head>
+<title>Scan Remediation Report #785</title>
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src data:; style-src 'nonce-Mzg0OWI5NzctOGY3OS00NWU2LTg1NzYtODY4OTAzZTBkZjQx'; base-uri 'none';">
+<style nonce="Mzg0OWI5NzctOGY3OS00NWU2LTg1NzYtODY4OTAzZTBkZjQx">
+body {
+font-family: 'Roboto', Helvetica, Arial, sans-serif;
+color: #4d5155;
+-webkit-font-smoothing: antialiased;
+font-size: 14px;
+background-color: #F7F9FD;
+}
+
+.report {
+width: 712px;
+margin: 0 auto;
+position: relative;
+background-color: white;
+border-left: 60px solid white;
+border-right: 60px solid white;
+border-top: 20px solid white;
+border-bottom: 20px solid white;
+}
+
+.header {
+height: 150px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #0094FF;
+}
+
+.header h1 {
+font-size: 44px;
+color: #333332;
+}
+
+.header h2 {
+font-size: 26px;
+color: #333332;
+}
+
+.line {
+border-left: 16px solid #0094FF;
+height: 150px;
+width: 24px;
+position: absolute;
+left: -40px;
+float: left;
+}
+
+.section {
+width: 100%;
+margin-top: 50px;
+}
+
+.section.no-margin {
+margin-top: 10px;
+}
+
+.label {
+white-space: nowrap;
+color: #8c8d8e;
+margin-top: 30px;
+}
+
+.label:first-child {
+margin-top: 0px;
+}
+
+.divider {
+border-bottom: 1px solid #0094FF;
+}
+
+.title h1 {
+color: #ffffff;
+padding: 10px 15px;
+margin: 0;
+font-size: 1.8em;
+}
+
+.title img {
+display: inline
+}
+
+table {
+line-height: 20px;
+}
+
+h1 {
+color: #333332;
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+h2 {
+color: #333332;
+font-size: 18px;
+font-weight: normal;
+margin-top: 0;
+margin-bottom: 20px;
+}
+
+a {
+color: #ff6633;
+text-decoration: none;
+}
+
+.column-table .value.warning {
+color: #ff6633;
+font-size: 12px;
+}
+
+.info-table {
+margin-right: 50px;
+}
+
+.info-table td {
+padding: 3px 3px 3px 0;
+border-bottom: 1px solid #ebf0f2;
+vertical-align: top;
+overflow-wrap: break-word;
+word-break: break-all;
+}
+
+.info-table td + td {
+margin: 20px
+}
+
+.info-table .name {
+width: 200px;
+white-space: nowrap;
+color: #8c8d8e;
+}
+
+.info-table .value {
+text-align: right;
+}
+
+.issue-table {
+border-collapse: collapse;
+margin-top: 30px;
+}
+
+.issue-table thead th {
+white-space: nowrap;
+}
+
+.issue-table tr {
+border: 0;
+border-bottom: 1px solid #8c8d8e;
+}
+
+.issue-table tr.issue-type-row {
+font-weight: bold;
+border-bottom: 0;
+}
+
+.issue-table tr th {
+text-align: left;
+padding-bottom: 8px;
+padding-right: 8px;
+width: 98%;
+}
+
+.issue-table tr .issue-path {
+word-wrap: break-word;
+max-width: 700px;
+text-align: left;
+padding-bottom: 8px;
+padding-right: 8px;
+width: 98%;
+}
+
+.issue-table td {
+padding-right: 8px;
+}
+
+.issue-table td.nowrap {
+white-space: nowrap;
+}
+
+.column-table {
+width: 100%;
+}
+
+.column-table > tbody > tr > td {
+width: 50%;
+vertical-align: top;
+}
+
+.column-table > tbody > tr > td > .value {
+display: flex;
+}
+
+.user-icon {
+padding-right: 6px;
+}
+
+.recorded-icon {
+padding-right: 10px;
+}
+
+.url {
+word-break: break-all;
+}
+
+.section.details h1 {
+margin-bottom: 30px;
+}
+
+.section.details h2 {
+font-size: 14px;
+font-weight: bold;
+color: #4d5155;
+margin: 0;
+}
+
+.section.details h3 {
+font-size: 14px;
+font-weight: normal;
+color: #8c8d8e;
+margin-top: 30px;
+margin-bottom: 20px;
+}
+
+.center {
+text-align: center;
+}
+
+.no-bullets ul {
+list-style: none;
+padding-left: 0;
+}
+
+.issue-container {
+margin-bottom: 30px;
+}
+
+@media print {
+body {
+color: #000000;
+position: relative;
+}
+
+.report {
+width: calc(100% - 80px);
+}
+
+h1, h2, a {
+color: #000000;
+}
+
+.no-print {
+display: none;
+}
+}
+.request-response {
+overflow: auto;
+border-radius: 7px;
+border: 1px solid #dce3e5;
+padding: 8px;
+color: #000000;
+}
+
+.request-response .highlight {
+background-color: rgba(255, 102, 51, 0.4);
+}
+
+.request-response, .code, pre {
+font-family: "Courier New", Courier, monospace;
+line-height: 16px;
+word-break: break-all;
+white-space: pre-wrap;
+}
+
+.request-response .snip {
+margin-top: 20px;
+margin-bottom: 20px;
+position: relative;
+border-top: 1px dashed #cbd0d1;
+}
+
+.request-response .snip > span {
+position: absolute;
+top: -13px;
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+
+.request-response .snip > span > span {
+color: #8c8d8e;
+padding: 0 8px;
+background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+<div class="report">
+<div class="line"></div>
+
+<div class="header">
+<div class="text">
+<h1>Scan Remediation</h1>
+<h2>Report</h2>
+</div>
+<img src='data:image/svg+xml;base64,PHN2ZyBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNzYgODkiIHZpZXdCb3g9IjAgMCAyNzYgODkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0ibTE0OS42IDEyLjJjMi45IDAgNS40IDEgNyAyLjUgMi44IDIuOCAzLjIgNy40IDMuMiAxMi4xcy0uNSA5LjMtMy4yIDEyLjJjLTEuNiAxLjYtNCAyLjUtNyAyLjUtMy4xIDAtNS40LS43LTcuNS0zLjN2MTQuNWgtNS44di00MC4xaDUuN3YzLjFjMi4yLTIuNyA0LjYtMy41IDcuNi0zLjV6bS01Ny4zLjR2MTcuNGMwIDQuNSAyLjUgNi40IDUuOCA2LjQgMy4yIDAgNS45LTIgNS45LTYuNHYtMTcuNGg1Ljh2MjguN2gtNS42di0yLjljLTIgMi4xLTQuOCAzLjMtNy42IDMuMi0yLjYuMS01LjItLjktNy4xLTIuNi0yLjItMi4xLTIuOS00LjktMi45LTguMXYtMTguM3ptMTEyLjMgMHYxNy40YzAgNC41IDIuNSA2LjQgNS44IDYuNCAzLjIgMCA1LjktMiA1LjktNi40di0xNy40aDUuOHYyOC43aC01LjZ2LTIuOWMtMiAyLjEtNC44IDMuMy03LjYgMy4yLTIuNi4xLTUuMi0uOS03LjEtMi42LTIuMi0yLjEtMi45LTQuOS0yLjktOC4xdi0xOC4zem0tMjIuNy0xMmM1LjQgMCA5LjEgMS40IDEyLjUgNC42bC0zLjkgMy44Yy0yLjUtMi40LTUuNC0zLjEtOC45LTMuMS00LjggMC03LjMgMi42LTcuMyA2LjMtLjEgMS40LjQgMi44IDEuNSAzLjcgMSAuOSAyLjIgMS41IDQuNCAxLjhsNC44LjdjMy43LjYgNS43IDEuNCA3LjUgMyAyLjIgMiAzLjMgNC43IDMuMyA4LjMgMCA3LjQtNiAxMS44LTE0LjUgMTEuOC02LjEgMC0xMC40LTEuNC0xNC4zLTUuM2w0LTRjMi45IDIuOSA2LjMgMy45IDEwLjQgMy45IDUuMyAwIDguMy0yLjMgOC4zLTYuMiAwLTEuOC0uNS0zLjItMS42LTQuMi0xLS45LTIuNC0xLjQtNC40LTEuN2wtNC44LS43Yy0zLjMtLjUtNS44LTEuNS03LjYtMy4yLTItMS44LTMtNC40LTMtNy44LjEtNi45IDUuMi0xMS43IDEzLjYtMTEuN3ptODEuMiAxMS42YzcuNyAwIDEyLjIgNS41IDEyLjIgMTMuOXYyLjRoLTE4LjZjMCA1IDIuNSA4IDcuMyA4IDMuMiAwIDQuOS0uOSA3LTIuOWwzLjcgMy41Yy0zIDIuOS01LjcgNC41LTEwLjggNC41LTcuMiAwLTEyLjktMy44LTEyLjktMTQuNy0uMS05LjQgNC43LTE0LjcgMTIuMS0xNC43em0tMzAuNC40djI4LjdoLTUuOHYtMjguN3ptLTE2Mi42LTExLjZjNy41IDAgMTIuMiA0LjIgMTIuMiAxMSAuMSAzLjctMi4xIDcuMS01LjQgOC41IDMuMSAxLjIgNi4xIDQuMiA2LjEgOS4zIDAgNy40LTUgMTEuNC0xMi4yIDExLjRoLTE2LjR2LTQwLjJ6bTY0LjYgMTMuOS00LjQgNC40Yy0xLjMtMS4zLTIuMy0xLjktNC4zLTEuOS0zLjEgMC01LjcgMi41LTUuNyA2LjV2MTcuNGgtNS44di0yOC43aDUuN3YzLjFjMS41LTIgNC40LTMuNCA3LjYtMy40IDIuNy0uMiA1LjIuOCA2LjkgMi42em0xMDkuNS0xMC41djguMmg1LjZ2NC40aC01LjZ2MTZjMCAyLjEgMSAzLjMgMy4yIDMuM2gyLjR2NC45aC0zLjVjLTUuNCAwLTcuOS0zLjgtNy45LTh2LTE2LjJoLTMuM3YtNC40aDMuM3YtOC4yem0tOTYuMSAxM2MtNS4zIDAtNiA0LjQtNiA5LjVzLjcgOS42IDYgOS42IDUuOS00LjUgNS45LTkuNi0uNi05LjUtNS45LTkuNXptLTc3LjkgNi4xaC05LjZ2MTIuM2g5LjZjNC4yIDAgNi42LTIuNiA2LjYtNi4ycy0yLjQtNi4xLTYuNi02LjF6bTE5Mi44LTYuNWMtMi40IDAtNC43IDEuNC01LjcgMy42LS41IDEuMi0uOCAyLjUtLjcgMy45aDEyLjljMC0xLjMtLjMtMi43LS44LTMuOS0xLTIuMS0zLjItMy42LTUuNy0zLjZ6bS0xOTMuNC0xMC41aC05LjF2MTEuNWg5LjFjMy45IDAgNi42LTIgNi42LTUuOCAwLTMuNy0yLjctNS43LTYuNi01Ljd6bTE2My4zLTUuN3Y2LjFoLTYuMXYtNi4xeiIgZmlsbD0iIzAwMDAyMyIvPjxwYXRoIGQ9Im00MS42LjhoLTQwLjd2NDAuN2g0MC43eiIgZmlsbD0iIzAwOTRmZiIvPjxwYXRoIGQ9Im0yMi44IDM1LjhoLTMuMnYtNC43bDQuMy01LjJoLTQuM3YtNi40aC03LjZsNy43LTkuNXYtMy42aDMuMnY0LjdsLTQuMyA1LjJoNC4zdjYuNGg3LjdsLTcuNyA5LjV2My42eiIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Im0xMjQuMSA2Ni40YzEuMy0uMSAyLjcuNCAzLjcgMS4zIDEuNSAxLjUgMS45IDQgMS45IDYuM3MtLjQgNC44LTEuOSA2LjNjLTEgLjktMi4zIDEuNC0zLjcgMS4zLTEuNy4xLTMuNC0uNy00LjQtMi4xdjloLTEuNnYtMjJoMS42djEuOWMxLTEuNCAyLjctMi4yIDQuNC0yem0tMjYuMSAwYzMuNyAwIDYgMi43IDYgNy4zdi43aC0xMC40YzAgMy44IDEuNyA1LjkgNC45IDUuOSAxLjYuMSAzLjEtLjYgNC4xLTEuOGwxLjIuOWMtMS40IDEuNS0zLjMgMi40LTUuNCAyLjMtNC4xIDAtNi40LTIuNi02LjQtNy42IDAtNC45IDIuMi03LjcgNi03Ljd6bTcwLjEgMGMzLjggMCA2IDIuNyA2IDcuM3YuN2gtMTAuNGMwIDMuOCAxLjcgNS45IDQuOSA1LjkgMS42LjEgMy4xLS42IDQuMS0xLjhsMS4yLjljLTEuNCAxLjUtMy4zIDIuNC01LjQgMi4zLTQuMSAwLTYuNC0yLjYtNi40LTcuNiAwLTQuOSAyLjItNy43IDYtNy43em00Mi4xLTd2MjJoLTEuNnYtMS45Yy0xIDEuNC0yLjcgMi4yLTQuNCAyLjEtMS4zLjEtMi43LS40LTMuNy0xLjMtMS41LTEuNS0xLjktNC0xLjktNi4zIDAtMi40LjQtNC44IDEuOS02LjMgMS0uOSAyLjMtMS40IDMuNy0xLjMgMS43LS4xIDMuNC43IDQuNCAyLjF2LTloMS42em0tNTAuOSA4LjUtMS4xIDEuMWMtMS4yLS45LTIuNy0xLjMtNC4yLTEuMy0yLjUgMC0zLjggMS0zLjggMi45IDAgMS42LjkgMi4zIDMgMi41bDIuNC4yYzIuNS4yIDQuNCAxIDQuNCAzLjkgMCAyLjctMi4zIDQuNC02IDQuNC0yLjYgMC00LjUtLjctNi4xLTIuMWwxLjEtMS4xYzEuMyAxLjMgMy4xIDEuOSA0LjkgMS44IDIuOSAwIDQuNS0xIDQuNS0zIDAtMS42LS45LTIuMy0yLjktMi41bC0yLjUtLjJjLTMtLjItNC41LTEuNS00LjUtMy45IDAtMi42IDIuMS00LjIgNS40LTQuMiAyLS4xIDMuOS41IDUuNCAxLjV6bTgyLjcuMWMxLjYgMS42IDEuOSAzLjkgMS45IDZzLS4zIDQuNC0xLjkgNmMtMi4zIDIuMi02IDIuMi04LjMgMC0xLjYtMS42LTEuOS0zLjktMS45LTZzLjMtNC40IDEuOS02YzIuMy0yLjIgNS45LTIuMiA4LjMgMHptLTEyNS42LS4yLTEuMSAxLjFjLS43LS44LTEuNy0xLjItMi44LTEuMi0yLjYgMC00IDIuMS00IDQuNXY5LjJoLTEuNnYtMTQuOGgxLjZ2MmMxLTEuNCAyLjYtMi4yIDQuNC0yLjIgMS4yLS4xIDIuNS40IDMuNSAxLjR6bTI1LjkgMC0xLjEgMS4xYy0uNy0uOC0xLjctMS4yLTIuOC0xLjItMi42IDAtNCAyLjEtNCA0LjV2OS4yaC0xLjZ2LTE0LjhoMS42djJjMS0xLjQgMi42LTIuMiA0LjQtMi4yIDEuMy0uMSAyLjYuNCAzLjUgMS40em0xMTIuNC0xLjRjMi4zLjggMy44IDMuMSAzLjYgNS41djkuNWgtMS42di05LjNjMC0yLjktMS40LTQuNS00LjEtNC41cy00LjIgMS42LTQuMiA0LjV2OS4zaC0xLjZ2LTE0LjloMS42djEuOGMxLjUtMS45IDQtMi43IDYuMy0xLjl6bS01Ny43LTd2MS41aC0xMS43djguN2gxMHYxLjVoLTEwdjguOWgxMS43djEuNWgtMTMuNHYtMjJoMTMuNHptMjQuNCAyLjR2NC44aDMuNHYxLjJoLTMuNHY5LjljMCAxLjYuNyAyLjUgMi4zIDIuNWgxLjF2MS40aC0xLjRjLTIuNCAwLTMuNi0xLjYtMy42LTMuOXYtOS45aC0ydi0xLjJoMnYtNC44em0tMTQyLjkgNC43YzIuMy44IDMuOCAzLjEgMy42IDUuNXY5LjVoLTEuNnYtOS4zYzAtMi45LTEuNC00LjUtNC4xLTQuNXMtNC4yIDEuNi00LjIgNC41djkuM2gtMS42di0xNWgxLjZ2MS44YzEuNS0xLjkgNC0yLjcgNi4zLTEuOHptLTEwLjYtNy4xdjEuNWgtMTEuN3Y4LjdoMTB2MS41aC0xMHY4LjloMTEuN3YxLjVoLTEzLjR2LTIyaDEzLjR6bTE0Ny42IDcuMXYxNC45aC0xLjZ2LTE0Ljl6bS0xMjguMS00Ljd2NC44aDMuNHYxLjJoLTMuNHY5LjljMCAxLjYuNyAyLjUgMi4zIDIuNWgxLjF2MS40aC0xLjRjLTIuNCAwLTMuNi0xLjYtMy42LTMuOXYtOS45aC0ydi0xLjJoMnYtNC44em01OC4zIDQuN3YxNC45aC0xLjZ2LTE0Ljl6bTgzLjEgMHYxNC45aC0xLjZ2LTE0Ljl6bTUuOSAyLjVjLTEuMiAxLjItMS4zIDMuMS0xLjMgNC44di4yYzAgMS43LjEgMy43IDEuMyA1IDEuNyAxLjcgNC41IDEuNyA2LjIgMCAxLjItMS4yIDEuMy0zLjEgMS4zLTQuOHYtLjJjMC0xLjctLjEtMy43LTEuMy01LTEuNy0xLjctNC41LTEuNy02LjIgMHptLTMwLjMtMS4yYy0zLjcgMC00LjIgMy4yLTQuMiA2LjNzLjYgNi4zIDQuMiA2LjNjMy43IDAgNC4yLTMuMiA0LjItNi4zcy0uNi02LjMtNC4yLTYuM3ptLTgwLjUgMGMtMy43IDAtNC4yIDMuMi00LjIgNi4zcy42IDYuMyA0LjIgNi4zIDQuMi0zIDQuMi02LjF2LS4yYzAtMy4yLS41LTYuMy00LjItNi4zem00NC4yIDBjLTEuNyAwLTMuMiAxLTMuOSAyLjUtLjQuOS0uNiAxLjktLjUgMi44aDguOGMwLTEtLjItMS45LS41LTIuOC0uNy0xLjYtMi4yLTIuNi0zLjktMi41em0tNzAuMSAwYy0xLjcgMC0zLjIgMS0zLjkgMi41LS40LjktLjYgMS45LS41IDIuOGg4LjhjMC0xLS4yLTEuOS0uNS0yLjgtLjctMS42LTIuMi0yLjYtMy45LTIuNXptNDcuOS04LjR2MmgtMnYtMnptNjkuOCAwdjJoLTJ2LTJ6bTEzLjMgMHYyaC0ydi0yeiIgZmlsbD0iIzAwOTRmZiIvPjwvc3ZnPg==' width="210" height="60"/>
+</div>
+
+<div class="section no-margin">
+<span class="label">Generated by Burp Suite Enterprise Edition | 2022-05-10 5:37 PM</span>
+</div>
+
+<div class="section">
+<table class="column-table">
+<tbody>
+<tr>
+<td>
+<div class="label">Site name:</div>
+<div class="value">Montoya AI</div>
+<div class="label">Scanned:</div>
+<table>
+<tbody>
+<tr>
+<td>
+<div class="value">Start:</div>
+</td>
+<td>
+<div class="value">2022-05-10 3:30 PM</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="value">End:</div>
+</td>
+<td>
+<div class="value">2022-05-10 3:31 PM</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="label">Duration:</div>
+<div class="value">56s</div>
+<div class="label">Status:</div>
+<div class="value">Completed</div>
+</td>
+<td>
+<div class="label">Included URLs:</div>
+<div class="value url">http://insecure-website.com/</div>
+
+<div class="label">Scan configurations:</div>
+<div class="value">Audit checks - passive</div>
+
+<div class="label">Reference:</div>
+
+<div class="value">
+#785
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<table class="column-table">
+<tbody>
+<tr>
+<td>
+<h2>Issues by severity</h2>
+<table class="info-table">
+<tbody>
+<tr>
+<td class="name">High:</td>
+<td class="value">2</td>
+</tr>
+<tr>
+<td class="name">Medium:</td>
+<td class="value">0</td>
+</tr>
+<tr>
+<td class="name">Low:</td>
+<td class="value">2</td>
+</tr>
+<tr>
+<td class="name">Information:</td>
+<td class="value">7</td>
+</tr>
+<tr>
+<td class="name">Total issues found:</td>
+<td class="value">11</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<h2>Scan statistics</h2>
+<table class="info-table">
+<tbody>
+<tr>
+<td class="name">Total scanned URLs:</td>
+<td class="value">38</td>
+</tr>
+<tr>
+<td class="name">URLs with errors:</td>
+<td class="value">0</td>
+</tr>
+<tr>
+<td class="name">Requests made:</td>
+<td class="value">181</td>
+</tr>
+<tr>
+<td class="name">Network errors:</td>
+<td class="value">7</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section divider"></div>
+
+<div class="section">
+<h1>Issues found on https://insecure-website.com</h1>
+
+<table class='issue-table'>
+<thead>
+<tr>
+<th>URLs By issue type</th>
+<th>Severity</th>
+<th>Confidence</th>
+<th class="no-print">More detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="issue-type-row">
+<td colspan="4">Serialized object in HTTP message [2]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/csp/deser.html
+</td>
+<td>High</td>
+<td class="nowrap">Firm</td>
+<td class="nowrap center no-print"><a href="#7506846919693948928">&gt;&gt;</a></td>
+</tr><tr>
+<td class="issue-path issue-link">
+/csp/deser.html
+</td>
+<td>High</td>
+<td class="nowrap">Firm</td>
+<td class="nowrap center no-print"><a href="#6280723413078916096">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Strict transport security not enforced [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/
+</td>
+<td>Low</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#4261959790065524736">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Cross-domain Referer leakage [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/mavo_dom_based_xss/
+</td>
+<td>Info</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#8320383248628140032">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Cross-domain script include [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/mavo_dom_based_xss/
+</td>
+<td>Info</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#3407069032094916608">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Cacheable HTTPS response [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/
+</td>
+<td>Info</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#5585926756486715392">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">HTML does not specify charset [2]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/csp/deser.html
+</td>
+<td>Info</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#5986090895714761728">&gt;&gt;</a></td>
+</tr><tr>
+<td class="issue-path issue-link">
+/csp/dom.html
+</td>
+<td>Info</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#5855022829668592640">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Frameable response (potential Clickjacking) [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/
+</td>
+<td>Info</td>
+<td class="nowrap">Firm</td>
+<td class="nowrap center no-print"><a href="#5368771050634025984">&gt;&gt;</a></td>
+</tr><tr class="issue-type-row">
+<td colspan="4">Directory listing [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/csp/
+</td>
+<td>Info</td>
+<td class="nowrap">Firm</td>
+<td class="nowrap center no-print"><a href="#8558958888331465728">&gt;&gt;</a></td>
+</tr>
+</tbody>
+</table>
+</div><div class="section divider"></div>
+
+<div class="section">
+<h1>Issues found on http://insecure-website.com</h1>
+
+<table class='issue-table'>
+<thead>
+<tr>
+<th>URLs By issue type</th>
+<th>Severity</th>
+<th>Confidence</th>
+<th class="no-print">More detail</th>
+</tr>
+</thead>
+<tbody>
+<tr class="issue-type-row">
+<td colspan="4">Unencrypted communications [1]</td>
+</tr>
+
+<tr>
+<td class="issue-path issue-link">
+/
+</td>
+<td>Low</td>
+<td class="nowrap">Certain</td>
+<td class="nowrap center no-print"><a href="#3842076015566960640">&gt;&gt;</a></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section divider"></div>
+
+<div class="section details">
+<h1>More details for https://insecure-website.com</h1>
+</div>
+
+<div class="section details">
+<div class="issue-container">
+<a name="7506846919693948928"></a>
+<h2>Serialized object in HTTP message</h2>
+<a href="">/csp/deser.html</a>
+
+<h3>Issue detail:</h3>
+<div>
+The parameter <b>harvestme</b> appears to contain a serialized <b>Java object</b>.
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>Applications may submit a serialized object in a request parameter. This behavior can expose the application in various ways, including:</p>
+<ul>
+<li>Any sensitive data contained within the object can be viewed by the user.</li><li>An attacker may be able to interfere with server-side logic by tampering with the contents of the object and re-serializing it.</li><li>An attacker may be able to cause unauthorized code execution on the server, by controlling the server-side function that is invoked when the object is processed.</li></ul>
+<p>Actual exploitation of any code execution vulnerabilities arising from the application's use of serialized objects will typically require the attacker to have access to the source code of the server-side application. This may mitigate the practical impact of this issue in many situations. However, it is still highly recommended to fix the underlying vulnerability. Vulnerabilities in native deserialization functions often allow practical exploitation without source code access.</p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>The best way to avoid vulnerabilities that arise from the use of serialized objects is not to pass these in request parameters, or expose them in any other way to the client. Generally, it is possible to transmit application data in plain non-serialized form, and handle it with the same precautions that apply to all client-submitted data. If it is considered unavoidable to place serialized objects into request parameters, then it may be possible to prevent attacks by also placing a server-generated cryptographic signature of the object into the same request, and validating the signature before performing deserialization or other processing on the object.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+    <li><a href="https://portswigger.net/web-security/deserialization">Web Security Academy: Insecure deserialization</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/586.html">CAPEC-586: Object Injection</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/deser.html HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/csp/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:44 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:20 GMT
+Etag: &quot;106-5a6c740e3873e-gzip&quot;
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Length: 262
+Content-Type: text/html
+
+
+&lt;html&gt;&lt;body&gt;&lt;form type=&#39;multipart&#39; action=&#39;?&#39;&gt;&lt;input name=&#39;harvestme&#39; value=&#39;<span class="highlight">rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAH</span>&#39;&gt;&lt;/input&gt;
+&lt;in<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div><div class="issue-container">
+<a name="6280723413078916096"></a>
+<h2>Serialized object in HTTP message</h2>
+<a href="">/csp/deser.html</a>
+
+<h3>Issue detail:</h3>
+<div>
+The parameter <b>harvestme</b> appears to contain a serialized <b>Java object</b>.
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>Applications may submit a serialized object in a request parameter. This behavior can expose the application in various ways, including:</p>
+<ul>
+<li>Any sensitive data contained within the object can be viewed by the user.</li><li>An attacker may be able to interfere with server-side logic by tampering with the contents of the object and re-serializing it.</li><li>An attacker may be able to cause unauthorized code execution on the server, by controlling the server-side function that is invoked when the object is processed.</li></ul>
+<p>Actual exploitation of any code execution vulnerabilities arising from the application's use of serialized objects will typically require the attacker to have access to the source code of the server-side application. This may mitigate the practical impact of this issue in many situations. However, it is still highly recommended to fix the underlying vulnerability. Vulnerabilities in native deserialization functions often allow practical exploitation without source code access.</p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>The best way to avoid vulnerabilities that arise from the use of serialized objects is not to pass these in request parameters, or expose them in any other way to the client. Generally, it is possible to transmit application data in plain non-serialized form, and handle it with the same precautions that apply to all client-submitted data. If it is considered unavoidable to place serialized objects into request parameters, then it may be possible to prevent attacks by also placing a server-generated cryptographic signature of the object into the same request, and validating the signature before performing deserialization or other processing on the object.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+    <li><a href="https://portswigger.net/web-security/deserialization">Web Security Academy: Insecure deserialization</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/502.html">CWE-502: Deserialization of Untrusted Data</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/586.html">CAPEC-586: Object Injection</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/deser.html?harvestme=<span class="highlight">rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAH</span>&amp;submit=click HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/csp/deser.html
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:01:00 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:20 GMT
+Etag: &quot;106-5a6c740e3873e-gzip&quot;
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Length: 262
+Content-Type: text/html
+
+
+&lt;html&gt;&lt;body&gt;&lt;form type=&#39;multipart&#39; action=&#39;?&#39;&gt;&lt;input name=&#39;harvestme&#39; value=&#39;rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAH&#39;&gt;&lt;/input&gt;
+&lt;in<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="4261959790065524736"></a>
+<h2>Strict transport security not enforced</h2>
+<a href="">/</a>
+
+<h3>Issue detail:</h3>
+<div>
+This issue was found in multiple locations under the reported path.
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p> The application fails to prevent users from connecting  to it over unencrypted connections.  An attacker able to modify a legitimate user's network traffic could bypass the application's use of SSL/TLS encryption, and use the application as a platform for attacks against its users. This attack is performed by rewriting HTTPS links as HTTP, so that if a targeted user follows a link to the site from an HTTP page, their browser never attempts to use an encrypted connection. The sslstrip tool  automates this process. </p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to intercept and modify the victim's network traffic.This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>The application should instruct web browsers to only access the application using HTTPS. To do this, enable HTTP Strict Transport Security (HSTS) by adding a response header with the name 'Strict-Transport-Security' and the value 'max-age=expireTime', where expireTime is the time in seconds that browsers should remember that the site should only be accessed using HTTPS. Consider adding the 'includeSubDomains' flag if appropriate.</p>
+<p>Note that because HSTS is a &quot;trust on first use&quot; (TOFU) protocol, a user who has never accessed the application will never have seen the HSTS header, and will therefore still be vulnerable to SSL stripping attacks. To mitigate this risk, you can optionally add the 'preload' flag to the HSTS header, and submit the domain for review by browser vendors.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li>
+<li><a href="https://github.com/moxie0/sslstrip">sslstrip</a></li>
+<li><a href="https://hstspreload.appspot.com/">HSTS Preload Form</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/523.html">CWE-523: Unprotected Transport of Credentials</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/ HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:22 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1528
+Content-Type: text/html;charset=UTF-8
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Index of /csp&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /csp&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign=&quot;top&quot;&gt;&lt;img src=&quot;/icons/blank.g<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="8320383248628140032"></a>
+<h2>Cross-domain Referer leakage</h2>
+<a href="">/mavo_dom_based_xss/</a>
+
+<h3>Issue detail:</h3>
+<div>
+The page was loaded from a URL containing a query string:<ul><li>https://insecure-website.com/mavo_dom_based_xss/</li></ul>The response contains the following links to other domains:<ul><li>https://get.mavo.io/mavo.css</li><li>https://plugins.mavo.io/markdown/mavo-markdown.js</li><li>https://plugins.mavo.io/yaml/mavo-yaml.js</li><li>https://www.w3.org/Mail/flatten/index?subject={comment}&amp;list=www-style</li></ul>
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>When a web browser makes a request for a resource, it typically adds an HTTP header, called the "Referer" header, indicating the URL of the resource from which the request originated. This occurs in numerous situations, for example when a web page loads an image or script, or when a user clicks on a link or submits a form.</p>
+<p>If the resource being requested resides on a different domain, then the Referer header is still generally included in the cross-domain request. If the originating URL contains any sensitive information within its query string, such as a session token, then this information will be transmitted to the other domain. If the other domain is not fully trusted by the application, then this may lead to a security compromise.</p>
+<p>You should review the contents of the information being transmitted to other domains, and also determine whether those domains are fully trusted by the originating application.</p>
+<p>Today's browsers may withhold the Referer header in some situations (for example, when loading a non-HTTPS resource from a page that was loaded over HTTPS, or when a Refresh directive is issued), but this behavior should not be relied upon to protect the originating URL from disclosure.</p>
+<p>Note also that if users can author content within the application then an attacker may be able to inject links referring to a domain they control in order to capture data from URLs used within the application. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>Applications should never transmit any sensitive information within the URL query string. In addition to being leaked in the Referer header, such information may be logged in various locations and may be visible on-screen to untrusted parties. If placing sensitive information in the URL is unavoidable, consider using the Referer-Policy HTTP header to reduce the chance of it being disclosed to third parties.
+</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referrer-Policy">Referer Policy</a></li>
+    <li><a href="https://portswigger.net/web-security/information-disclosure">Web Security Academy: Information disclosure</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/200.html">CWE-200: Information Exposure</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /mavo_dom_based_xss/?spec=css-images&amp;doc=cr-2012 HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/mavo_dom_based_xss/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:45 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:21 GMT
+Etag: &quot;2955-5a6c740e972e0-gzip&quot;
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Length: 10581
+Content-Type: text/html
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; mv-expressions=&quot;{ }&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Disposition of Comments&lt;/title&gt;
+	<span class="highlight">&lt;link rel=&quot;stylesheet&quot; href=&quot;https://get.mavo.io/mavo.css&quot;&gt;</span>
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;issues.css&quot;&gt;<div class="snip"><span><span>Snip</span></span></div>&lt;/div&gt;
+
+<span class="highlight">&lt;script src=&quot;https://plugins.mavo.io/yaml/mavo-yaml.js&quot;&gt;</span>&lt;/script&gt;
+<span class="highlight">&lt;script src=&quot;https://plugins.mavo.io/markdown/mavo-markdown.js&quot;&gt;</span><span class="highlight"></span>&lt;/script&gt;<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="3407069032094916608"></a>
+<h2>Cross-domain script include</h2>
+<a href="">/mavo_dom_based_xss/</a>
+
+<h3>Issue detail:</h3>
+<div>
+The response dynamically includes the following scripts from other domains:<ul><li>https://plugins.mavo.io/markdown/mavo-markdown.js</li><li>https://plugins.mavo.io/yaml/mavo-yaml.js</li></ul>
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>When an application includes a script from an external domain, this script is executed by the browser within the security context of the invoking application. The script can therefore do anything that the application's own scripts can do, such as accessing application data and performing actions within the context of the current user.</p>
+<p>If you include a script from an external domain, then you are trusting that domain with the data and functionality of your application, and you are trusting the domain's own security to prevent an attacker from modifying the script to perform malicious actions within your application. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>Scripts should ideally not be included from untrusted domains. Applications that rely on static third-party scripts should consider using Subresource Integrity to make browsers verify them, or copying the contents of these scripts onto their own domain and including them from there. If that is not possible (e.g. for licensing reasons) then consider reimplementing the script's functionality within application code.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+<li>
+<a href="https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity">Subresource Integrity</a>
+</li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/829.html">CWE-829: Inclusion of Functionality from Untrusted Control Sphere</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /mavo_dom_based_xss/?spec=css-images&amp;doc=cr-2012 HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/mavo_dom_based_xss/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:45 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:21 GMT
+Etag: &quot;2955-5a6c740e972e0-gzip&quot;
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Length: 10581
+Content-Type: text/html
+
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot; mv-expressions=&quot;{ }&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;title&gt;Disposition of Comments&lt;/title&gt;
+	&lt;link rel=&quot;stylesheet&quot; href=&quot;https://get.mavo.io/mavo.css&quot;&gt;
+	&lt;link rel=&quot;s<div class="snip"><span><span>Snip</span></span></div>&lt;/div&gt;
+
+<span class="highlight">&lt;script src=&quot;https://plugins.mavo.io/yaml/mavo-yaml.js&quot;&gt;</span>&lt;/script&gt;
+<span class="highlight">&lt;script src=&quot;https://plugins.mavo.io/markdown/mavo-markdown.js&quot;&gt;</span>&lt;/script&gt;<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="5585926756486715392"></a>
+<h2>Cacheable HTTPS response</h2>
+<a href="">/</a>
+
+<h3>Issue detail:</h3>
+<div>
+This issue was found in multiple locations under the reported path.
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>Unless directed otherwise, browsers may store a local cached copy of content received from web servers. Some browsers, including Internet Explorer, cache content accessed via HTTPS. If sensitive information in application responses is stored in the local cache, then this may be retrieved by other users who have access to the same computer at a future time.</p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>Applications should return caching directives instructing browsers not to store local copies of any sensitive data. Often, this can be achieved by configuring the web server to prevent caching for relevant paths within the web root. Alternatively, most web development platforms allow you to control the server's caching directives from within individual scripts. Ideally, the web server should return the following HTTP headers in all responses containing sensitive content:</p>
+<ul>
+<li>Cache-control: no-store</li><li>Pragma: no-cache</li></ul>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+    <li><a href="https://portswigger.net/web-security/information-disclosure">Web Security Academy: Information disclosure</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/524.html">CWE-524: Information Exposure Through Caching</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/525.html">CWE-525: Information Exposure Through Browser Caching</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/37.html">CAPEC-37: Retrieve Embedded Sensitive Data</a></li>
+</ul>
+</div>
+
+<h3>Request 1:</h3>
+<div class="request-response">GET /csp/dom.html HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 1:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:41 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:20 GMT
+Etag: &quot;42-5a6c740e3873e&quot;
+Accept-Ranges: bytes
+Content-Length: 66
+Content-Type: text/html
+
+&lt;html&gt;
+&lt;script&gt;
+document.write(window.location)
+&lt;/script&gt;
+&lt;/html&gt;
+</div>
+<h3>Request 2:</h3>
+<div class="request-response">GET /xss-unreliable.php/?xss2=test HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/xss-unreliable.php/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 2:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:59 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 127
+Content-Type: text/html; charset=UTF-8
+
+&lt;!doctype HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+Only vulnerable after the 15th of the month.
+
+&lt;a href=&quot;?xss2=test&quot;&gt;click&lt;/a&gt;
+
+10
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+<h3>Request 3:</h3>
+<div class="request-response">GET /csp/ HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 3:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:22 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1528
+Content-Type: text/html;charset=UTF-8
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Index of /csp&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /csp&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign=&quot;top&quot;&gt;&lt;img src=&quot;/icons/blank.g<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="5986090895714761728"></a>
+<h2>HTML does not specify charset</h2>
+<a href="">/csp/deser.html</a>
+
+<h3>
+Issue description
+</h3>
+<div>
+<p>If a  response states that it contains HTML content but does not specify a character set, then the browser may analyze the HTML and attempt to determine which character set it appears to be using. Even if the majority of the HTML actually employs a standard character set such as UTF-8, the presence of non-standard characters anywhere in the response may cause the browser to interpret the content using a different character set. This can have unexpected results, and can lead to cross-site scripting vulnerabilities in which non-standard encodings like UTF-7 can be used to bypass the application's defensive filters.</p>
+<p>In most cases, the absence of a charset directive does not constitute a security flaw, particularly if the response contains static content. You should review the contents of affected responses, and the context in which they appear, to determine whether any vulnerability exists. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>For every response containing HTML content, the application should include within the Content-type header a directive specifying a standard recognized character set, for example <b>charset=ISO-8859-1</b>.
+</p>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/16.html">CWE-16: Configuration</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/436.html">CWE-436: Interpretation Conflict</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/deser.html HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/csp/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:44 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:20 GMT
+Etag: &quot;106-5a6c740e3873e-gzip&quot;
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Content-Length: 262
+<span class="highlight">Content-Type: text/html</span>
+
+
+&lt;html&gt;&lt;body&gt;&lt;form type=&#39;multipart&#39; action=&#39;?&#39;&gt;&lt;input name=&#39;harvestme&#39; value=&#39;rO0ABXNyABFqYXZhLmxhbmcuSW50ZWdlchLioKT3gYc4AgABSQAFdmFsdWV4cgAQamF2YS5sYW5nLk51bWJlcoaslR0LlOCLAgAAeHAAAAAH&#39;&gt;&lt;/input&gt;
+&lt;in<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div><div class="issue-container">
+<a name="5855022829668592640"></a>
+<h2>HTML does not specify charset</h2>
+<a href="">/csp/dom.html</a>
+
+<h3>
+Issue description
+</h3>
+<div>
+<p>If a  response states that it contains HTML content but does not specify a character set, then the browser may analyze the HTML and attempt to determine which character set it appears to be using. Even if the majority of the HTML actually employs a standard character set such as UTF-8, the presence of non-standard characters anywhere in the response may cause the browser to interpret the content using a different character set. This can have unexpected results, and can lead to cross-site scripting vulnerabilities in which non-standard encodings like UTF-7 can be used to bypass the application's defensive filters.</p>
+<p>In most cases, the absence of a charset directive does not constitute a security flaw, particularly if the response contains static content. You should review the contents of affected responses, and the context in which they appear, to determine whether any vulnerability exists. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>For every response containing HTML content, the application should include within the Content-type header a directive specifying a standard recognized character set, for example <b>charset=ISO-8859-1</b>.
+</p>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/16.html">CWE-16: Configuration</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/436.html">CWE-436: Interpretation Conflict</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/dom.html HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:41 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Last-Modified: Fri, 29 May 2020 10:53:20 GMT
+Etag: &quot;42-5a6c740e3873e&quot;
+Accept-Ranges: bytes
+Content-Length: 66
+<span class="highlight">Content-Type: text/html</span>
+
+&lt;html&gt;
+&lt;script&gt;
+document.write(window.location)
+&lt;/script&gt;
+&lt;/html&gt;
+</div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="5368771050634025984"></a>
+<h2>Frameable response (potential Clickjacking)</h2>
+<a href="">/</a>
+
+<h3>Issue detail:</h3>
+<div>
+This issue was found in multiple locations under the reported path.
+</div>
+
+<h3>
+Issue background
+</h3>
+<div>
+<p>If a page fails to set an appropriate X-Frame-Options or Content-Security-Policy HTTP header, it might be possible for a page controlled by an attacker to load it within an iframe. This may enable a clickjacking attack, in which the attacker's page overlays the target application's interface with a different interface provided by the attacker. By inducing victim users to perform actions such as mouse clicks and keystrokes, the attacker can cause them to unwittingly carry out actions within the application that is being targeted. This technique allows the attacker to circumvent defenses against cross-site request forgery, and may result in unauthorized actions.</p>
+<p>Note that some applications attempt to prevent these attacks from within the HTML page itself, using "framebusting" code. However, this type of defense is normally ineffective and can usually be circumvented by a skilled attacker.</p>
+<p>You should determine whether any functions accessible within frameable pages can be used by application users to perform any sensitive actions within the application. </p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>To effectively prevent framing attacks, the application should return a response header with the name <b>X-Frame-Options</b> and the value <b>DENY</b> to prevent framing altogether, or the value <b>SAMEORIGIN</b> to allow framing only by pages on the same origin as the response itself. Note that the SAMEORIGIN header can be partially bypassed if the application itself can be made to frame untrusted websites.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+    <li><a href="https://portswigger.net/web-security/clickjacking">Web Security Academy: Clickjacking</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/X-Frame-Options">X-Frame-Options</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/693.html">CWE-693: Protection Mechanism Failure</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/103.html">CAPEC-103: Clickjacking</a></li>
+</ul>
+</div>
+
+<h3>Request 1:</h3>
+<div class="request-response">GET /csp/ HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 1:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:22 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1528
+Content-Type: text/html;charset=UTF-8
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Index of /csp&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /csp&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign=&quot;top&quot;&gt;&lt;img src=&quot;/icons/blank.g<div class="snip"><span><span>Snip</span></span></div></div>
+<h3>Request 2:</h3>
+<div class="request-response">GET /xss-unreliable.php/?xss2=test HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Referer: https://insecure-website.com/xss-unreliable.php/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 2:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:59 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 127
+Content-Type: text/html; charset=UTF-8
+
+&lt;!doctype HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+Only vulnerable after the 15th of the month.
+
+&lt;a href=&quot;?xss2=test&quot;&gt;click&lt;/a&gt;
+
+10
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+<h3>Request 3:</h3>
+<div class="request-response">GET /xss.php/ HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response 3:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:39 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 77
+Content-Type: text/html; charset=UTF-8
+
+&lt;!doctype HTML&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;a href=&quot;?xss=test&quot;&gt;click&lt;/a&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section details">
+<div class="issue-container">
+<a name="8558958888331465728"></a>
+<h2>Directory listing</h2>
+<a href="">/csp/</a>
+
+<h3>
+Issue description
+</h3>
+<div>
+<p>Web servers can be configured to automatically list the contents of directories that do not have an index page present. This can aid an attacker by enabling them to quickly identify the resources at a given path, and proceed directly to analyzing and attacking those resources. It particularly increases the exposure of sensitive files within the directory that are not intended to be accessible to users, such as temporary files and crash dumps.</p>
+<p>Directory listings themselves do not necessarily constitute a security vulnerability. Any sensitive resources within the web root should in any case be properly access-controlled, and should not be accessible by an unauthorized party who happens to know or guess the URL. Even when directory listings are disabled, an attacker may guess the location of sensitive files using automated tools.</p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>There is not usually any good reason to provide directory listings, and disabling them may place additional hurdles in the path of an attacker. This can normally be achieved in two ways:</p>
+<ul>
+<li>Configure your web server to prevent directory listings for all paths beneath the web root; </li>
+<li>Place into each directory a default file (such as index.htm) that the web server will display instead of returning a directory listing.</li></ul>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+    <li><a href="https://portswigger.net/web-security/information-disclosure/exploiting#directory-listings">Web Security Academy: Information disclosure via directory listings</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/538.html">CWE-538: File and Directory Information Exposure</a></li>
+<li><a href="https://cwe.mitre.org/data/definitions/548.html">CWE-548: Information Exposure Through Directory Listing</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/37.html">CAPEC-37: Retrieve Embedded Sensitive Data</a></li>
+</ul>
+</div>
+
+<h3>Request:</h3>
+<div class="request-response">GET /csp/ HTTP/2
+Host: insecure-website.com
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Upgrade-Insecure-Requests: 1
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US;q=0.9,en;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.41 Safari/537.36
+Connection: close
+Cache-Control: max-age=0
+
+</div>
+<h3>Response:</h3>
+<div class="request-response">HTTP/2 200 OK
+Date: Tue, 10 May 2022 10:00:22 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Vary: Accept-Encoding
+Content-Length: 1528
+Content-Type: text/html;charset=UTF-8
+
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;html&gt;
+ &lt;head&gt;
+  <span class="highlight">&lt;title&gt;Index of /csp</span>&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+&lt;h1&gt;Index of /csp&lt;/h1&gt;
+  &lt;table&gt;
+   &lt;tr&gt;&lt;th valign=&quot;top&quot;&gt;&lt;img src=&quot;/icons/blank.g<div class="snip"><span><span>Snip</span></span></div>&lt;th&gt;<span class="highlight">&lt;a href=&quot;?C=N;O=D&quot;&gt;Name</span>&lt;/a&gt;&lt;/th&gt;&lt;th&gt;<span class="highlight">&lt;a href=&quot;?C=M;O=A&quot;&gt;Last modified</span>&lt;/a&gt;&lt;/th&gt;&lt;th&gt;<span class="highlight">&lt;a href=&quot;?C=S;O=A&quot;&gt;Size</span>&lt;/a&gt;&lt;/th&gt;&lt;th&gt;<span class="highlight">&lt;a href=&quot;?C=D;O=A&quot;&gt;Description</span>&lt;/a&gt;<div class="snip"><span><span>Snip</span></span></div>&lt;td&gt;<span class="highlight">&lt;a href=&quot;/&quot;&gt;Parent Directory</span>&lt;/a&gt;<div class="snip"><span><span>Snip</span></span></div></div>
+
+</div>
+</div>
+
+<div class="section divider"></div><div class="section divider"></div>
+
+<div class="section details">
+<h1>More details for http://insecure-website.com</h1>
+</div>
+
+<div class="section details">
+<div class="issue-container">
+<a name="3842076015566960640"></a>
+<h2>Unencrypted communications</h2>
+<a href="">/</a>
+
+<h3>
+Issue description
+</h3>
+<div>
+<p>The application allows users to connect to it over unencrypted connections.  An attacker suitably positioned to view a legitimate user's network traffic could record and monitor their interactions with the application and obtain any information the user supplies. Furthermore, an attacker able to modify traffic could use the application as a platform for attacks against its users and third-party websites. Unencrypted connections have been exploited by ISPs and governments to track users, and to inject adverts and malicious JavaScript. Due to these concerns, web browser vendors are planning to visually flag unencrypted connections as hazardous.</p>
+<p>
+To exploit this vulnerability, an attacker must be suitably positioned to eavesdrop on the victim's network traffic. This scenario typically occurs when a client communicates with the server over an insecure connection such as public Wi-Fi, or a corporate or home network that is shared with a compromised computer. Common defenses such as switched networks are not sufficient to prevent this. An attacker situated in the user's ISP or the application's hosting infrastructure could also perform this attack. Note that an advanced adversary could potentially target any connection made over the Internet's core infrastructure.
+</p>
+<p>Please note that using a mixture of encrypted and unencrypted communications is an ineffective defense against active attackers, because they can easily remove references to encrypted resources when these references are transmitted over an unencrypted connection.</p>
+</div>
+
+<h3>
+Issue remediation
+</h3>
+<div>
+<p>Applications should use transport-level encryption (SSL/TLS) to protect all communications passing between the client and the server. The Strict-Transport-Security HTTP header should be used to ensure that clients refuse to access the server over an insecure connection.</p>
+</div>
+
+<h3>References</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://www.chromium.org/Home/chromium-security/marking-http-as-non-secure">Marking HTTP as non-secure</a></li>
+<li><a href="https://wiki.mozilla.org/Security/Server_Side_TLS">Configuring Server-Side SSL/TLS</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Security/HTTP_strict_transport_security">HTTP Strict Transport Security</a></li>
+</ul>
+</div>
+
+<h3>Vulnerability classifications</h3>
+<div class="no-bullets">
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/326.html">CWE-326: Inadequate Encryption Strength</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/94.html">CAPEC-94: Man in the Middle Attack</a></li>
+    <li><a href="https://capec.mitre.org/data/definitions/157.html">CAPEC-157: Sniffing Attacks</a></li>
+</ul>
+</div>
+
+</div>
+</div>
+
+<div class="section divider"></div>
+
+</div>
+</body>
+</html>
